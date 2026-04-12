@@ -11,7 +11,7 @@
 body {
     background: transparent;
     font-family: 'Tiempos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #bg-video {
@@ -24,9 +24,9 @@ body {
     z-index: -1;
 }
 
+/* ── NAV ── */
 .navegation {
     background-color: rgb(39, 39, 39);
-
 }
 
 .navegation ul {
@@ -38,7 +38,6 @@ body {
 .navegation li {
     list-style: none;
     padding: 10px;
-
 }
 
 .navegation a {
@@ -47,10 +46,11 @@ body {
     text-decoration: none;
 }
 
+/* ── PERFIL ── */
 #Foto-perfil {
     display: flex;
     max-width: 30%;
-    height: 30%;
+    height: auto;
     border-radius: 50%;
     margin-bottom: 1%;
     border-bottom: 5px solid rgb(255, 145, 0);
@@ -63,25 +63,24 @@ body {
     flex-direction: row-reverse;
     margin-top: 2.5%;
     background: linear-gradient(45deg, rgba(87, 87, 87, 0.575), rgba(14, 14, 14, 0.863));
-
+    padding: 2%;
 }
 
-.Perfil li {
+.Perfil > li {
     text-decoration: none;
     list-style: none;
-
+    flex: 1;
 }
 
-
-
+/* ── NOME ── */
 .Nome {
     color: rgb(255, 255, 255);
     font-size: 40px;
     padding-left: 2%;
     display: flex;
-
 }
 
+/* ── REDES ── */
 .Redes {
     display: flex;
     align-items: center;
@@ -89,31 +88,24 @@ body {
     justify-content: start;
     padding-left: 2%;
     margin-top: 2%;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .Redes img {
     margin-right: 5px;
     width: 30px;
     height: 30px;
-
 }
 
-.Instagram-id {
-    display: flex;
-    margin-right: 1%;
-}
-
-.Linkedin-id {
-    display: flex;
-    margin-right: 1%;
-
-}
-
+.Instagram-id,
+.Linkedin-id,
 .Github-id {
     display: flex;
     margin-right: 1%;
 }
 
+/* ── SOBRE MIM ── */
 .Sobre-mim {
     display: flex;
     align-items: center;
@@ -127,10 +119,9 @@ body {
     padding-top: 1%;
     padding-bottom: 1%;
     flex-direction: column;
-
 }
 
-
+/* ── TECNOLOGIAS ── */
 .Tecnologias {
     display: flex;
     align-items: center;
@@ -144,18 +135,9 @@ body {
     border-bottom: 3px solid rgb(255, 145, 0);
 }
 
-.Tecnologias-lista img {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    margin-right: 5%;
-
-}
-
 .Tecnologias-lista {
     display: flex;
     padding-bottom: 2%;
-
 }
 
 .Tecnologias-lista ul {
@@ -169,4 +151,100 @@ body {
     flex-direction: row;
     padding-top: 5%;
     margin-right: 50%;
+}
+
+.Tecnologias-lista img {
+    width: 100px;
+    height: 100px;
+    margin-right: 5%;
+}
+
+/* ════════════════════════════════════════
+   TABLET  (≤ 768px)
+════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .Perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5% 4%;
+        margin-top: 0;
+    }
+
+    #Foto-perfil {
+        max-width: 50%;
+        margin-bottom: 4%;
+    }
+
+    .Nome {
+        font-size: 30px;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .Redes {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .Sobre-mim {
+        margin-right: 0;
+        font-size: 16px;
+        text-align: center;
+        padding: 3% 2%;
+    }
+
+    .Tecnologias {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .Tecnologias-lista li {
+        margin-right: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 3%;
+    }
+
+    .Tecnologias-lista img {
+        width: 70px;
+        height: 70px;
+        margin-right: 0;
+    }
+}
+
+/* ════════════════════════════════════════
+   MOBILE  (≤ 480px)
+════════════════════════════════════════ */
+@media (max-width: 480px) {
+    .Perfil {
+        padding: 6% 4%;
+    }
+
+    #Foto-perfil {
+        max-width: 65%;
+    }
+
+    .Nome {
+        font-size: 24px;
+    }
+
+    .Redes img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .Sobre-mim {
+        font-size: 14px;
+    }
+
+    .Tecnologias h1 {
+        font-size: 16px;
+    }
+
+    .Tecnologias-lista img {
+        width: 52px;
+        height: 52px;
+    }
 }
