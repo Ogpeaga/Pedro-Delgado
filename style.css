@@ -24,7 +24,6 @@ body {
     z-index: -1;
 }
 
-/* ── NAV ── */
 .navegation {
     background-color: rgb(39, 39, 39);
 }
@@ -46,7 +45,6 @@ body {
     text-decoration: none;
 }
 
-/* ── PERFIL ── */
 #Foto-perfil {
     display: flex;
     max-width: 30%;
@@ -66,13 +64,12 @@ body {
     padding: 2%;
 }
 
-.Perfil > li {
+.Perfil>li {
     text-decoration: none;
     list-style: none;
     flex: 1;
 }
 
-/* ── NOME ── */
 .Nome {
     color: rgb(255, 255, 255);
     font-size: 40px;
@@ -80,7 +77,6 @@ body {
     display: flex;
 }
 
-/* ── REDES ── */
 .Redes {
     display: flex;
     align-items: center;
@@ -105,7 +101,6 @@ body {
     margin-right: 1%;
 }
 
-/* ── SOBRE MIM ── */
 .Sobre-mim {
     display: flex;
     align-items: center;
@@ -121,7 +116,6 @@ body {
     flex-direction: column;
 }
 
-/* ── TECNOLOGIAS ── */
 .Tecnologias {
     display: flex;
     align-items: center;
@@ -159,9 +153,7 @@ body {
     margin-right: 5%;
 }
 
-/* ════════════════════════════════════════
-   TABLET  (≤ 768px)
-════════════════════════════════════════ */
+
 @media (max-width: 768px) {
     .Perfil {
         flex-direction: column;
@@ -214,9 +206,6 @@ body {
     }
 }
 
-/* ════════════════════════════════════════
-   MOBILE  (≤ 480px)
-════════════════════════════════════════ */
 @media (max-width: 480px) {
     .Perfil {
         padding: 6% 4%;
