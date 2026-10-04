@@ -1,81 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="./fonts/SF-Pro-Display-Regular.otf">
-    <link rel="stylesheet" href="./fonts/TiemposHeadline-Regular.otf">
-    <title>Home</title>
 </head>
 
 <body>
-    <nav class="navegation">
+
+<div id="container">
+
+    <div></div>
+    <div class="header">
+        <p id="apresentation">
+            Hello, I'm Pedro, a Backend Developer passionate about technology and software development.
+        </p>
+    </div>
+
+    <div class="scroll">
+        <img id="scroll-img" src="img/arrows.png" alt="">
+    </div>
+
+    <div class="bloco">
+        <img id="foto-perfil" src="img/perfil site.png" alt="Pedro Delgado">
         <ul>
+            <li>
+                <h1 id="name">
+                    Pedro Delgado
+                </h1>
 
-            <li id="inicio-class"><a href=#inicio>Início</a></li>
-            <li><a href=#projetos>Projetos</a></li>
+                <h2 id="job">
+                    Back-end Developer
+                </h2>
+            </li>
+
+            <li class="social">
+                <a href="https://www.linkedin.com/in/devpedrodelgado/" target="_blank" rel="noopener">
+                    <img id="linkedin" src="img/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/Ogpeaga" target="_blank" rel="noopener">
+                    <img id="github" src="img/github.png" alt="GitHub">
+                </a>
+            </li>
+
+            <li class="dev">
+                <p id="java">Java</p>
+                <p id="docker">Docker</p>
+                <p id="javascript">Javascript</p>
+            </li>
         </ul>
-    </nav>
+    </div>
 
-    <video autoplay muted loop id="bg-video">
-        <source src="./video/video-background.mp4" type="video/mp4">
-    </video>
+    <div class="scroll">
+        <img id="scroll-img2" src="img/arrows.png" alt="">
+    </div>
 
-    <section class="Perfil">
-        <img id="Foto-perfil" src="./img/perfil site.png">
+    <div class="bloco2">
+        <a href="https://app.enceasy.com/" class="enceasy-link">
+            <p id="enceasy">ENCEASY</p>
+        </a>
+    </div>
+
+    <div class="bloco3">
         <li>
-            <div class="Nome">
-                <h1>Pedro H. Delgado</h1>
-            </div>
-            <div class="Redes">
-                <a href="https://www.instagram.com/og.peaga/"><img src="./social/instagram.png"></a>
-
-                <div class="Instagram-id">
-                    <p>og.peaga</p>
-                </div>
-
-                <a href="https://www.linkedin.com/in/devpedrodelgado/"><img src="./social/linkedin.png"></a>
-
-                <div class="Linkedin-id">
-                    <p>Pedro Delgado</p>
-                </div>
-
-                <a href="https://github.com/Ogpeaga"><img src="./social/github.png"></a>
-
-                <div class="Github-id">
-                    <p>Pedro Delgado</p>
-                </div>
-            </div>
-
-            <div class="Sobre-mim">
-                <p>" Olá, Sou desenvolvedor Back-end - Java.
-                    Tenho experiência com HTML, CSS, Java Spring Boot, Git e PostegreSql.
-                    Gosto de criar projetos que ajudem as pessoas e que façam a diferença no mundo.
-                    Além disso, estou sempre buscando novos conhecimentos e tecnologias para agregar ao meu trabalho.
-                    Acredito que a tecnologia tem o poder de transformar o mundo e estou animado para fazer parte dessa
-                    transformação. "</p>
-            </div>
-
-            <div class="Tecnologias">
-                <h1>Tecnologias:</h1>
-            </div>
-            <div class="Tecnologias-lista">
-                <ul>
-                    <li>
-                        <img src="./img/java.png">
-                        <img src="./img/postgre.png">
-                        <img src="./img/html.png">
-                        <img src="./img/css.png">
-                        <img src="./img/git.png">
-                    </li>
-                </ul>
-            </div>
+            <p id="apresantation-enceasy">Enceasy is an application designed to simplify and optimize link sharing. The platform allows users to transform long and difficult-to-remember URLs into short, practical, and easy-to-share links.
+                The project was developed with a focus on simplicity, performance, and user experience, providing a fast and efficient solution for generating and managing shortened URLs.</p>
         </li>
+    </div>
 
-    </section>
+    <div class="bloco4"></div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/devpedrodelgado/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Ogpeaga" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <p class="footer-text">&copy; 2026 Pedro Delgado. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script>
+        const fog = VANTA.FOG({
+            el: "#container",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xffffff,
+            midtoneColor: 0xfefefe,
+            lowlightColor: 0x4a77bb,
+            baseColor: 0x7d8ea5,
+            blurFactor: 0.6,
+            zoom: 1,
+            speed: 1
+        });
+
+        // Mantém a névoa cobrindo a página toda quando o conteúdo muda de tamanho
+        const container = document.getElementById("container");
+        new ResizeObserver(() => fog.resize()).observe(container);
+        window.addEventListener("load", () => fog.resize());
+    </script>
+</div>
 
 </body>
 

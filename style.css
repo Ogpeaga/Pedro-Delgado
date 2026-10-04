@@ -3,237 +3,338 @@
     margin: 0;
 }
 
-@font-face {
-    font-family: 'Tiempos';
-    src: url('./fonts/TiemposHeadline-Regular.otf');
+html, body {
+    background-color: #7d8ea5;
 }
 
 body {
-    background: transparent;
-    font-family: 'Tiempos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("./fonts/SF-Pro-Display-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "The Bold";
+    src: url("./fonts/THEBOLDFONT-FREEVERSION.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url("./fonts/HeadingNowTrial-27Extrabold.ttf") format("truetype");
+}
+
+#container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.navegation {
-    background-color: rgb(39, 39, 39);
-}
-
-.navegation ul {
-    display: flex;
-    justify-content: center;
-    padding-right: 15px;
-}
-
-.navegation li {
-    list-style: none;
-    padding: 10px;
-}
-
-.navegation a {
-    color: rgb(255, 255, 255);
-    transition: 1.0s;
-    text-decoration: none;
-}
-
-#Foto-perfil {
-    display: flex;
-    max-width: 30%;
+    min-height: 100vh;
     height: auto;
-    border-radius: 50%;
-    margin-bottom: 1%;
-    border-bottom: 5px solid rgb(255, 145, 0);
+    position: relative;
+    z-index: 1;
 }
 
-.Perfil {
+.header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    margin-top: 2.5%;
-    background: linear-gradient(45deg, rgba(87, 87, 87, 0.575), rgba(14, 14, 14, 0.863));
-    padding: 2%;
-}
-
-.Perfil>li {
-    text-decoration: none;
-    list-style: none;
-    flex: 1;
-}
-
-.Nome {
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    padding-left: 2%;
-    display: flex;
-}
-
-.Redes {
-    display: flex;
-    align-items: center;
-    filter: invert(100%);
-    justify-content: start;
-    padding-left: 2%;
-    margin-top: 2%;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.Redes img {
-    margin-right: 5px;
-    width: 30px;
-    height: 30px;
-}
-
-.Instagram-id,
-.Linkedin-id,
-.Github-id {
-    display: flex;
-    margin-right: 1%;
-}
-
-.Sobre-mim {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    color: rgb(255, 145, 0);
-    font-size: 20px;
-    margin-top: 2%;
-    margin-left: 10px;
-    margin-right: 50%;
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    flex-direction: column;
-}
-
-.Tecnologias {
-    display: flex;
+    padding-top: 10%;
+    padding-right: 20%;
+    padding-left: 25%;
+    padding-bottom: 10%;
     align-items: center;
-    justify-content: start;
-    font-size: 13px;
-    color: white;
-    margin-top: 5%;
-    margin-left: 10px;
-    margin-right: 60%;
-    padding-left: 1%;
-    border-bottom: 3px solid rgb(255, 145, 0);
+    font-family: Bold;
+    font-size: clamp(28px, 7vw, 100px);
+    background-image: linear-gradient(to right, rgb(0 0 0), rgb(80 124 181));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.Tecnologias-lista {
+.scroll{
     display: flex;
-    padding-bottom: 2%;
+    justify-content: center;
 }
 
-.Tecnologias-lista ul {
+#scroll-img{
+    display: flex;
+    max-width: 1%;
+    min-width: 14px;
+    padding-top: 5%;
+}
+
+.bloco{
     display: flex;
     align-items: start;
-    justify-content: start;
+    justify-content:center;
+    padding-top: 15%;
 }
 
-.Tecnologias-lista li {
+#foto-perfil{
+    display: flex;
+    max-width: 10%;
+    border-radius: 20%;
+    border: 3px solid #b8c9d8;
+}
+
+.bloco ul{
+    padding-left: 2rem;
+}
+
+.bloco li{
+    list-style: none;
+    padding-top: 2rem;
+}
+
+#name{
+    display: flex;
+    font-size: 15px;
+}
+
+#job{
+    display: flex;
+    font-size: 25px;
+    padding-top: 1%;
+}
+
+/* LinkedIn e GitHub lado a lado */
+.social{
     display: flex;
     flex-direction: row;
-    padding-top: 5%;
-    margin-right: 50%;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
 }
 
-.Tecnologias-lista img {
-    width: 100px;
-    height: 100px;
+.social a{
+    display: flex;
+}
+
+#linkedin,
+#github{
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.dev{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    list-style: none;
+    font-family: 'The Bold';
+    font-size: 15px;
+    padding-top: 1rem;
+}
+
+#java{
+    display: flex;
+    cursor: pointer;
     margin-right: 5%;
+    border-radius: 10%;
+    background-image: linear-gradient(to right, rgb(0 0 0), rgb(80 124 181));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#java:hover{
+    scale:1.1;
+    transition: 300ms;
+}
+
+#docker{
+    display: flex;
+    cursor: pointer;
+    margin-right: 5%;
+    border-radius: 10%;
+    background-image: linear-gradient(to right, rgb(0 0 0), rgb(80 124 181));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#docker:hover{
+    scale:1.1;
+    transition: 300ms;
+}
+
+#javascript{
+    display: flex;
+    cursor: pointer;
+    margin-right: 5%;
+    border-radius: 10%;
+    background-image: linear-gradient(to right, rgb(0 0 0), rgb(80 124 181));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#javascript:hover{
+    scale:1.1;
+    transition: 300ms;
+}
+
+#scroll-img2{
+    display: flex;
+    padding-top: 15%;
+    max-width: 1%;
+    min-width: 14px;
+}
+
+.bloco2{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-top: 10%;
+    font-family: Bold;
+    font-size: clamp(40px, 10vw, 100px);
+    background-image: linear-gradient(to right, rgb(0 0 0), rgb(0 0 0), rgb(0 0 0 / 0.71), rgb(255 57 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.enceasy-link {
+    text-decoration: none;
+}
+
+.bloco3{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.bloco3 li{
+    list-style: none;
+    justify-items: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(0 0 0 / 0.04), rgb(154 169 189));
+}
+
+.bloco4{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin: 10%;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid rgb(0 0 0 / 0.15);
+}
+
+.footer-links{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 24px;
+}
+
+.footer-links a{
+    color: #1c2a3d;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.footer-links a:hover{
+    color: rgb(80 124 181);
+    scale: 1.15;
+}
+
+.footer-text{
+    font-size: 13px;
+    color: #1c2a3d;
 }
 
 
+/* ---------- Tablet ---------- */
 @media (max-width: 768px) {
-    .Perfil {
+    .header{
+        padding: 25% 8% 12%;
+        text-align: center;
+    }
+
+    .bloco{
         flex-direction: column;
         align-items: center;
+        padding: 3rem 1.5rem 0;
         text-align: center;
-        padding: 5% 4%;
-        margin-top: 0;
     }
 
-    #Foto-perfil {
-        max-width: 50%;
-        margin-bottom: 4%;
+    #foto-perfil{
+        max-width: none;
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
     }
 
-    .Nome {
-        font-size: 30px;
-        justify-content: center;
+    .bloco ul{
         padding-left: 0;
     }
 
-    .Redes {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .Sobre-mim {
-        margin-right: 0;
-        font-size: 16px;
-        text-align: center;
-        padding: 3% 2%;
-    }
-
-    .Tecnologias {
-        margin-right: 0;
+    #name,
+    #job{
         justify-content: center;
     }
 
-    .Tecnologias-lista li {
-        margin-right: 0;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding-top: 3%;
+    #name{
+        font-size: 18px;
     }
 
-    .Tecnologias-lista img {
-        width: 70px;
-        height: 70px;
-        margin-right: 0;
+    #job{
+        font-size: 22px;
+        padding-top: 0.25rem;
+    }
+
+    .social,
+    .dev{
+        justify-content: center;
+    }
+
+    #scroll-img,
+    #scroll-img2{
+        width: 20px;
+        min-width: 20px;
+        max-width: none;
+        padding-top: 2.5rem;
+    }
+
+    .bloco2{
+        padding-top: 3rem;
+    }
+
+    .bloco3 li{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .bloco4{
+        margin: 5%;
     }
 }
 
+/* ---------- Celular ---------- */
 @media (max-width: 480px) {
-    .Perfil {
-        padding: 6% 4%;
+    .header{
+        padding: 30% 6% 12%;
     }
 
-    #Foto-perfil {
-        max-width: 65%;
+    .dev{
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
     }
 
-    .Nome {
-        font-size: 24px;
+    #java,
+    #docker,
+    #javascript{
+        margin-right: 0;
     }
 
-    .Redes img {
-        width: 24px;
-        height: 24px;
-    }
-
-    .Sobre-mim {
+    .bloco3{
         font-size: 14px;
-    }
-
-    .Tecnologias h1 {
-        font-size: 16px;
-    }
-
-    .Tecnologias-lista img {
-        width: 52px;
-        height: 52px;
     }
 }
